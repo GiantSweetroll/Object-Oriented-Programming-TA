@@ -16,19 +16,19 @@ public class Demo
 			  //Your code 3
 			}
     	 */
-//    	int n = 24;
-//    	if (n<20)
-//    	{
-//    		System.out.println("Number is less than 20");
-//    	}
-//    	else if (n > 30)
-//    	{
-//    		System.out.println("Number is greater than 30");
-//    	}
-//    	else
-//    	{
-//    		System.out.println("Number is between 20 and 30");
-//    	}
+    	int n = 24;
+    	if (n<20)
+    	{
+    		System.out.println("Number is less than 20");
+    	}
+    	else if (n > 30)
+    	{
+    		System.out.println("Number is greater than 30");
+    	}
+    	else
+    	{
+    		System.out.println("Number is between 20 and 30");
+    	}
     	
     	
     	////Switch statement
@@ -49,35 +49,35 @@ public class Demo
 			    break;
 			}
     	 */
-//    	int n2 = 30;
-//    	switch(n2)
-//    	{
-//	    	case 20:
-//	    		System.out.println("Hello I am 20");
-//	    		break;
-//	    		
-//	    	case 30:
-//	    		System.out.println("Hello I am 30");
-//	    		break;
-//    		
-//    		default:
-//    			System.out.println("Hello I am something else");
-//    			break;
-//    	}
+    	int n2 = 30;
+    	switch(n2)
+    	{
+	    	case 20:
+	    		System.out.println("Hello I am 20");
+	    		break;
+	    		
+	    	case 30:
+	    		System.out.println("Hello I am 30");
+	    		break;
+    		
+    		default:
+    			System.out.println("Hello I am something else");
+    			break;
+    	}
     	
     	//If statement equivalent
-//    	if (n2 == 20)
-//    	{
-//    		System.out.println("Hello I am 20");
-//    	}
-//    	else if (n2 == 30)
-//    	{
-//    		System.out.println("Hello I am 30");
-//    	}
-//    	else
-//    	{
-//    		System.out.println("Hello I am something else");
-//    	}
+    	if (n2 == 20)
+    	{
+    		System.out.println("Hello I am 20");
+    	}
+    	else if (n2 == 30)
+    	{
+    		System.out.println("Hello I am 30");
+    	}
+    	else
+    	{
+    		System.out.println("Hello I am something else");
+    	}
     	
     	////For loops
     	/*
