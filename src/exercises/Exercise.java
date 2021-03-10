@@ -6,41 +6,50 @@ public class Exercise
 {	
 	public static void main (String args[])
 	{
-		///Have the user input a number and check if that number is even or odd
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Please input a number: ");
-		int n = sc.nextInt();
-		sc.nextLine();
-		if (n % 2 == 0)
-		{
-			System.out.println("Number is even");
-		}
-		else
-		{
-			System.out.println("Number is odd");
-		}
-		sc.close();//Close the input stream (to prevent memory leak)
+		//______ arr [] = {65, 3.4, 4.3f}; Fill in the blanks
+		float arr [] = {65, 3.4f, 4.3f};
+
+		//Have the user input a number 5 times and print them out in reverse order.
+		// Scanner sc = new Scanner(System.in);
+		// int[] inputs = new int[5];
+
+		// for (int i=0; i<5; i++)
+		// {
+		// 	System.out.print("Enter number: ");
+		// 	inputs[i] = sc.nextInt();
+		// 	sc.nextLine();
+		// }
+
+		// for (int i = 4; i >= 0; i--)
+		// {
+		// 	System.out.println(inputs[i]);
+		// }
 		
-		///Print your name 5 times using a while loop
-		int i=1;
-		while (i <= 5)
+		// sc.close();
+		// System.out.println();
+
+		//Create a program that will find an item in an array and print out the index of that time. 
+		//If the item is not found, print -1 instead.
+		//Example array: {10, 55, 12, 3, 44, -3}
+		int[] newArray = {10, 55, 12, 3, 44, -3};
+		int itemToCheck = 99;
+		int indexFound = -1;
+
+		for (int i=0; i<newArray.length; i++)
 		{
-			System.out.println("Gardyan");
-			i++;
+			if (itemToCheck == newArray[i])
+			{
+				indexFound = i;
+				break;
+			}
 		}
+
+		System.out.println("Item found at: " + indexFound);
 		
-		///Print the numbers 7, 8, 9, 10, 11, and 12 using a do while loop (in that order)
-		int b = 7;
-		do
-		{
-			System.out.println(b);
-			b++;
-		} while (b <= 12);
-		
-		///Print the numbers 5, 4, 3, 2, and 1 using a for loop (in that order)
-		for (int c=5; c >= 1; c--)
-		{
-			System.out.println(c);
-		}
+
+		//Can you change the size of an array during runtime?
+		int size = 8;		//from ur user input
+		int[] array = new int[size];
+		array = new int[size+1];
 	}
 }

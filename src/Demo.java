@@ -2,128 +2,124 @@ public class Demo
 {
     public static void main (String args[])
     {
-    	////If statement
-    	/*
-    	  Syntax:
-    	  
-    	  if (condition1) {
-			   //Your code 1
-			}
-			else if (condition2) {
-			   //Your code 2
-			}
-			else {
-			  //Your code 3
-			}
-    	 */
-    	int n = 24;
-    	if (n<20)
-    	{
-    		System.out.println("Number is less than 20");
-    	}
-    	else if (n > 30)
-    	{
-    		System.out.println("Number is greater than 30");
-    	}
-    	else
-    	{
-    		System.out.println("Number is between 20 and 30");
-    	}
-    	
-    	
-    	////Switch statement
-    	/*
-    	   Syntax:
-    	  
-    	   switch (item) {
-			   case firstCase:
-			      //Your code 1
-			   break;
-			    
-			    case secondCase:
-			      //Your code 2
-			    break;
-			  
-			    default:
-			      //Your code 3
-			    break;
-			}
-    	 */
-    	int n2 = 30;
-    	switch(n2)
-    	{
-	    	case 20:
-	    		System.out.println("Hello I am 20");
-	    		break;
-	    		
-	    	case 30:
-	    		System.out.println("Hello I am 30");
-	    		break;
-    		
-    		default:
-    			System.out.println("Hello I am something else");
-    			break;
-    	}
-    	
-    	//If statement equivalent
-    	if (n2 == 20)
-    	{
-    		System.out.println("Hello I am 20");
-    	}
-    	else if (n2 == 30)
-    	{
-    		System.out.println("Hello I am 30");
-    	}
-    	else
-    	{
-    		System.out.println("Hello I am something else");
-    	}
-    	
-    	////For loops
-    	/*
-    	   Syntax:
-    	  
-    	   for (int i=0; i<5; i++) {
-			    //Your code here
-			}
-    	 */
-    	for (int i = 1; i <= 5; i++)
-    	{
-    		System.out.println(i);
-    	}
-    	
-    	////While loop
-    	/*
-    	   Syntax:
-    	  
-    	   while (condition) {
-			    //Your code here
-			}
-    	 */
-    	System.out.println("Using While loop");
-    	int i=1;
-    	while (i == 0)
-    	{
-    		System.out.println(i);
-    		i++;
-    	}
-    	System.out.println();
-    	
-    	////Do While loop
-    	/*
-    	   Syntax:
-    	  
-    	   do {
-			    //Your code here
-			} while (condition);
+        /**
+         * Array declaration.
+         * 
+         * Syntax:
+         * dataType[] varName;
+         * dataType varName[];
+         */
+        int[] myArray;
+        int myArray2[];
 
-    	 */
-    	System.out.println("Using Do-While loop");
-    	int a = 1;
-    	do 
-    	{
-    		System.out.println(a);
-    		a++;
-    	} while (a == 0);
-    }    
+        /**
+         * Initializing an array
+         * 
+         * Syntax:
+         * dataType[] varName = {item1, item2, item3};
+         * dataType varName[] = new dataType[size];
+         */
+        int[] anotherArray = {3, 4, 5};
+        int anotherArray2[] = new int[3];
+
+        /** 
+         * Access array
+         */
+        System.out.println("Accessing an array: ");
+        int[] items = {4, 12, 32};
+        int n = items[1];       //Get item at index 1
+        System.out.println(n);  //Will print 12
+        System.out.println();
+
+        /**
+         * Modifying the content of an array
+         */
+        System.out.println("Editing an array's content: ");
+        items[1] = 19;          //Will update value at index 1
+        n = items[1];
+        System.out.println(n);
+        System.out.println();
+
+        /**
+         * Length of array
+         */
+        System.out.println("Size of array: ");
+        int arrLength = items.length;
+        System.out.println(arrLength);
+        System.out.println();
+
+        /**
+         * Looping through array
+         */
+        System.out.println("Loop through array: ");
+        
+        //First Way (using standard for loop)
+        System.out.println("Using standard for loop");
+        for (int i = 0; i < items.length; i++)
+        {
+            int item = items[i];
+            System.out.println(item);
+        }
+
+        //Second Way (using advanced for loop)
+        System.out.println("Using advanced for loop");
+        for (int item : items)
+        {
+            System.out.println(item);
+        }
+
+        // System.out.println();
+
+        /**
+         * Multidimensional array
+         */
+        System.out.println("Multidimensional array: ");
+        //2D array
+        System.out.println("2D Array");
+        int multiArray [][] = { {1, 2, 3, 4}, 
+                                {5, 6, 7} };
+        int x = multiArray[1][2];       //x will be 7
+        System.out.println(x);
+
+        System.out.println("Looping through 2D array");
+        for (int row = 0; row < multiArray.length; row++)
+        {
+            for (int col = 0; col < multiArray[row].length; col++)
+            {
+                int item = multiArray[row][col];
+                System.out.print(item + ", ");
+            }
+            System.out.println();
+        }
+
+        //3D Array
+        System.out.println("3D array");
+        int my3DArray [][][] = {
+            {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+            },
+            {
+                {6, 23, 3, -3},
+                {-43, 59, 2, 3},
+            },
+        };
+
+        System.out.println("Looping through 3D array");
+        for (int i = 0; i < my3DArray.length; i++)
+        {
+            for (int j = 0; j < my3DArray[i].length; j++)
+            {
+                for (int k = 0; k < my3DArray[i][j].length; k++)
+                {
+                    int item = my3DArray[i][j][k];
+                    System.out.print(item + ", ");
+                }
+            }
+            System.out.println();
+        }
+
+        //Max amount of array dimensions
+        int weirdArray [][][][][][][][][][][][][][];
+    }
 }
