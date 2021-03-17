@@ -2,124 +2,99 @@ public class Demo
 {
     public static void main (String args[])
     {
-        /**
-         * Array declaration.
-         * 
-         * Syntax:
-         * dataType[] varName;
-         * dataType varName[];
-         */
-        int[] myArray;
-        int myArray2[];
+        //Example of a String
+    	System.out.println("String example: ");
+    	String name = "Paimon";
+    	String name2 = new String("Paimon");
+    	System.out.println(name);
+    	System.out.println(name2);
+    	System.out.println();
+    	
+    	/**
+    	 * length();
+    	 * 
+    	 * How to use:
+    	 * int len = myString.length();
+    	 */
+    	System.out.println("Length of string: " + name.length());
+    	
+    	/**
+    	 * toUpperCase();
+    	 * 
+    	 * How to use:
+    	 * String upper = myString.toUpperCase();
+    	 */
+    	System.out.println("Upper case: " + name.toUpperCase());
+    	
+    	/**
+    	 * toLowerCase();
+    	 * 
+    	 * How to use:
+    	 * String lower = myString.toLowerCase();
+    	 */
+    	System.out.println("Lower case: " + name.toLowerCase());
+    	System.out.println();
+    	
+    	/**
+    	 * String concatenation
+    	 */
+    	System.out.println("String concatenation: ");
+    	String str1 = "Vincentius";
+    	String str2 = "Bently";
+    	
+    	//+ operator
+    	System.out.println("Using + operator: ");
+    	System.out.println(str1 + str2);
+    	
+    	//concat() method
+    	System.out.println("Using concat() method: ");
+    	String temp = str2.concat(str1);
+    	System.out.println(temp);
+    	
+    	//using both?
+    	temp = str1.concat(" " + str2);
+    	System.out.println(temp);
+    	System.out.println();
+    	
+    	/**
+    	 * indexOf();
+    	 */
+    	String string = "I eat apple with apple juice";
 
-        /**
-         * Initializing an array
-         * 
-         * Syntax:
-         * dataType[] varName = {item1, item2, item3};
-         * dataType varName[] = new dataType[size];
-         */
-        int[] anotherArray = {3, 4, 5};
-        int anotherArray2[] = new int[3];
-
-        /** 
-         * Access array
-         */
-        System.out.println("Accessing an array: ");
-        int[] items = {4, 12, 32};
-        int n = items[1];       //Get item at index 1
-        System.out.println(n);  //Will print 12
-        System.out.println();
-
-        /**
-         * Modifying the content of an array
-         */
-        System.out.println("Editing an array's content: ");
-        items[1] = 19;          //Will update value at index 1
-        n = items[1];
-        System.out.println(n);
-        System.out.println();
-
-        /**
-         * Length of array
-         */
-        System.out.println("Size of array: ");
-        int arrLength = items.length;
-        System.out.println(arrLength);
-        System.out.println();
-
-        /**
-         * Looping through array
-         */
-        System.out.println("Loop through array: ");
-        
-        //First Way (using standard for loop)
-        System.out.println("Using standard for loop");
-        for (int i = 0; i < items.length; i++)
-        {
-            int item = items[i];
-            System.out.println(item);
-        }
-
-        //Second Way (using advanced for loop)
-        System.out.println("Using advanced for loop");
-        for (int item : items)
-        {
-            System.out.println(item);
-        }
-
-        // System.out.println();
-
-        /**
-         * Multidimensional array
-         */
-        System.out.println("Multidimensional array: ");
-        //2D array
-        System.out.println("2D Array");
-        int multiArray [][] = { {1, 2, 3, 4}, 
-                                {5, 6, 7} };
-        int x = multiArray[1][2];       //x will be 7
-        System.out.println(x);
-
-        System.out.println("Looping through 2D array");
-        for (int row = 0; row < multiArray.length; row++)
-        {
-            for (int col = 0; col < multiArray[row].length; col++)
-            {
-                int item = multiArray[row][col];
-                System.out.print(item + ", ");
-            }
-            System.out.println();
-        }
-
-        //3D Array
-        System.out.println("3D array");
-        int my3DArray [][][] = {
-            {
-                {1, 2, 3, 4},
-                {5, 6, 7, 8},
-            },
-            {
-                {6, 23, 3, -3},
-                {-43, 59, 2, 3},
-            },
-        };
-
-        System.out.println("Looping through 3D array");
-        for (int i = 0; i < my3DArray.length; i++)
-        {
-            for (int j = 0; j < my3DArray[i].length; j++)
-            {
-                for (int k = 0; k < my3DArray[i][j].length; k++)
-                {
-                    int item = my3DArray[i][j][k];
-                    System.out.print(item + ", ");
-                }
-            }
-            System.out.println();
-        }
-
-        //Max amount of array dimensions
-        int weirdArray [][][][][][][][][][][][][][];
+    	int index = string.indexOf("juice");		//What will be the value of index?
+    	int index2 = string.indexOf("apple");		//What will be the value of index2?
+    	int index3 = string.indexOf(" ");			//What will be the value of index3?
+    	System.out.println(string.indexOf("jason"));
+    	System.out.println();
+    	
+    	/**
+    	 * substring();
+    	 */
+    	String txt = "reception";
+    	
+    	String txt2 = txt.substring(1);
+    	String txt3 = txt.substring(1, 4);
+    	String txt4 = txt.substring(0, 9);
+    	
+    	System.out.println(txt.length());
+    	System.out.println(txt4);
+    	
+    	//Special Characters
+    	String viking = "We are \n the so-called \"Vikings\" from the north.";
+    	System.out.print(viking + "\n");
+    	System.out.println("Gardyan Herman Martinez");
+    	System.out.println();
+    	
+    	//String Comparison
+    	System.out.println("String Comparison: ");
+    	String j1 = "Jude";
+    	String j2 = "Jude";
+    	String j3 = new String("jude");
+    	
+    	System.out.println(j1.equalsIgnoreCase(j3));
+    	
+    	System.out.println("Using compareTo()");
+    	String j4 = "Juda";
+    	System.out.println(j1.compareTo(j4));
     }
 }

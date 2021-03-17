@@ -1,55 +1,26 @@
 package exercises;
 
-import java.util.Scanner;
-
 public class Exercise 
 {	
 	public static void main (String args[])
 	{
-		//______ arr [] = {65, 3.4, 4.3f}; Fill in the blanks
-		float arr [] = {65, 3.4f, 4.3f};
-
-		//Have the user input a number 5 times and print them out in reverse order.
-		// Scanner sc = new Scanner(System.in);
-		// int[] inputs = new int[5];
-
-		// for (int i=0; i<5; i++)
-		// {
-		// 	System.out.print("Enter number: ");
-		// 	inputs[i] = sc.nextInt();
-		// 	sc.nextLine();
-		// }
-
-		// for (int i = 4; i >= 0; i--)
-		// {
-		// 	System.out.println(inputs[i]);
-		// }
+		//No1 
+		String temp = "420" + "69" + (420 + 69);
+		System.out.println(temp);
 		
-		// sc.close();
-		// System.out.println();
-
-		//Create a program that will find an item in an array and print out the index of that time. 
-		//If the item is not found, print -1 instead.
-		//Example array: {10, 55, 12, 3, 44, -3}
-		int[] newArray = {10, 55, 12, 3, 44, -3};
-		int itemToCheck = 99;
-		int indexFound = -1;
-
-		for (int i=0; i<newArray.length; i++)
-		{
-			if (itemToCheck == newArray[i])
-			{
-				indexFound = i;
-				break;
-			}
-		}
-
-		System.out.println("Item found at: " + indexFound);
+		//No2
+		String jude = "mister jude pokemon master";
+		String ans = jude.substring(0, 1).toUpperCase() + 
+						jude.substring(1, 7) +
+						jude.substring(7, 8).toUpperCase() +
+						jude.substring(8, 12) +
+						jude.substring(12, 13).toUpperCase() +
+						jude.substring(13, 20) +
+						jude.substring(20, 21).toUpperCase() +
+						jude.substring(21);
+		System.out.println(ans);
 		
-
-		//Can you change the size of an array during runtime?
-		int size = 8;		//from ur user input
-		int[] array = new int[size];
-		array = new int[size+1];
+		//No 3
+		System.out.println(jude.replaceAll(" ", ""));
 	}
 }
