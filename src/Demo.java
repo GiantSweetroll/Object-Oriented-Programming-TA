@@ -1,100 +1,71 @@
+import java.util.ArrayList;
+import java.util.Vector;
+
 public class Demo 
 {
     public static void main (String args[])
     {
-        //Example of a String
-    	System.out.println("String example: ");
-    	String name = "Paimon";
-    	String name2 = new String("Paimon");
-    	System.out.println(name);
-    	System.out.println(name2);
-    	System.out.println();
+//    	int[] arr = {1, 4, 2};
+//    	ArrayList<Integer> arrA = new ArrayList<>();
+//    	Vector<Integer> arrV = new Vector<>();
+//    	
+//    	//How to add values in ArrayList
+//    	arrA.add(1);
+//    	arrA.add(4);
+//    	arrA.add(2);
+//    	
+//    	//How to add values in Vector
+//    	arrV.addElement(1);
+//    	arrV.add(4);
+//    	arrV.addElement(2);
+//    	
+//    	//How to get value
+//    	System.out.println(arrV.get(1));	//arr[0]
+//    	
+//    	//Remove
+//    	arrA.remove(1);
+//    	System.out.println(arrA.size());
     	
-    	/**
-    	 * length();
-    	 * 
-    	 * How to use:
-    	 * int len = myString.length();
-    	 */
-    	System.out.println("Length of string: " + name.length());
+    	//Parameter passing using primitive
+    	int a = 1;
+    	int b = 2;
+    	print("Before funnyAdd: Value of a: " + a + ", value of b: " + b);
+    	int res = funnyAdd(a, b);
+    	print("After funnyAdd: Value of a: " + a + ", value of b: " + b);
+    	System.out.println(res);
+    	print("");
     	
-    	/**
-    	 * toUpperCase();
-    	 * 
-    	 * How to use:
-    	 * String upper = myString.toUpperCase();
-    	 */
-    	System.out.println("Upper case: " + name.toUpperCase());
+    	//Parameter passing using a non-primitive
+    	ArrayList<Integer> ls = new ArrayList<>();
+    	ls.add(1);
+    	ls.add(2);
+    	print("Before funnyAdd: value of b: " + ls.get(1));
+    	funnyAdd(ls);
+    	print("After funnyAdd: value of b: " + ls.get(1));
+    }
+    
+    static void print(Object obj)
+    {
+    	System.out.println(obj);
+    }
+    
+    static void funnyAdd(ArrayList<Integer> list)
+    {
+    	list.set(1, 4);
+    	print("DURING funnyAdd: value of b: " + list.get(1));
+    }
+    
+    static int funnyAdd(int a, int b)
+    {
+    	a++;
+    	b+=2;
+    	print("DURING funnyAdd: Value of a: " + a + ", value of b: " + b);
     	
-    	/**
-    	 * toLowerCase();
-    	 * 
-    	 * How to use:
-    	 * String lower = myString.toLowerCase();
-    	 */
-    	System.out.println("Lower case: " + name.toLowerCase());
-    	System.out.println();
-    	
-    	/**
-    	 * String concatenation
-    	 */
-    	System.out.println("String concatenation: ");
-    	String str1 = "Vincentius";
-    	String str2 = "Bently";
-    	
-    	//+ operator
-    	System.out.println("Using + operator: ");
-    	System.out.println(str1 + str2);
-    	
-    	//concat() method
-    	System.out.println("Using concat() method: ");
-    	String temp = str2.concat(str1);
-    	System.out.println(temp);
-    	
-    	//using both?
-    	temp = str1.concat(" " + str2);
-    	System.out.println(temp);
-    	System.out.println();
-    	
-    	/**
-    	 * indexOf();
-    	 */
-    	String string = "I eat apple with apple juice";
-
-    	int index = string.indexOf("juice");		//What will be the value of index?
-    	int index2 = string.indexOf("apple");		//What will be the value of index2?
-    	int index3 = string.indexOf(" ");			//What will be the value of index3?
-    	System.out.println(string.indexOf("jason"));
-    	System.out.println();
-    	
-    	/**
-    	 * substring();
-    	 */
-    	String txt = "reception";
-    	
-    	String txt2 = txt.substring(1);
-    	String txt3 = txt.substring(1, 4);
-    	String txt4 = txt.substring(0, 9);
-    	
-    	System.out.println(txt.length());
-    	System.out.println(txt4);
-    	
-    	//Special Characters
-    	String viking = "We are \n the so-called \"Vikings\" from the north.";
-    	System.out.print(viking + "\n");
-    	System.out.println("Gardyan Herman Martinez");
-    	System.out.println();
-    	
-    	//String Comparison
-    	System.out.println("String Comparison: ");
-    	String j1 = "Jude";
-    	String j2 = "Jude";
-    	String j3 = new String("jude");
-    	
-    	System.out.println(j1.equalsIgnoreCase(j3));
-    	
-    	System.out.println("Using compareTo()");
-    	String j4 = "Juda";
-    	System.out.println(j1.compareTo(j4));
+    	return a + b;
+    }
+    
+    static int add(int a, int b)
+    {
+    	return a + b;
     }
 }
