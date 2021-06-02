@@ -1,38 +1,97 @@
 package demo;
 
+import java.util.ArrayList;
+
 public class Main
 {
+	
 	public static void main (String args[])
 	{
-		// Inheritance example
-		Animal a = new Animal();
-		Animal c = new Cat();
-		Animal d = new Dog();
+		// Using Abstract Classes
+		Animal dog = new Dog(3, "Fluffy");
+		Animal cat = new Cat(4, "Sprinkle");
 		
-		a.eat();
-		a.eat("chicken");
+		dog.eat();
+		cat.eat();
 		
-		System.out.println();
+		// Using Interfaces
+		ForestSurvival fs = new Dog(2, "Pupper");
+		Drink dr = new Dog(3, "Wolfie");
+		Human hm = new Cat(5, "Garfield");
 		
-		c.eat();
-		c.eat("fish");
+		fs.fight();
+		fs.hideUnderTree();
+		dr.drinkCleanWater();
 		
-		System.out.println();
+		System.out.println(fs instanceof Animal);
+		System.out.println(fs instanceof ForestSurvival);
+		System.out.println(fs instanceof Drink);
+		System.out.println(fs instanceof Dog);
+		System.out.println(fs instanceof Cat);
+		System.out.println(Drink.volume);
 		
+		hm.cry();
+		hm.talk();
 		
-		d.eat();
-		d.eat("bone");
+		// Initializing a new abstract class and interface
+		Animal animal = new Animal() 
+		{
+			@Override
+			public void eat() 
+			{
+				System.out.println("Animal eat");
+			}
+			
+		};
+		animal.eat();
 		
-		System.out.println();
+		Human newHuman = new Human() 
+		{
+			@Override
+			public void cry() 
+			{
+				System.out.println("Custom human cry");
+			}
+
+			@Override
+			public void talk() 
+			{
+				System.out.println("Custom human talk");
+			}	
+		};
+		newHuman.cry();
+		newHuman.talk();
 		
-		// Static Binding Example
-		a.sleep();
-		d.sleep();
+		// Using Abstract class and interface in list
+		ArrayList<Human> humans = new ArrayList<Human>();
+		for (int i=1; i<=5; i++)
+		{
+			final int a = i;
+			Human human = new Human() 
+			{
+				@Override
+				public void cry() {
+					System.out.println("Human " + a + " cry.");
+				}
+
+				@Override
+				public void talk() {
+					System.out.println("Human " + a + " talk.");
+					
+				}
+			};
+			humans.add(human);
+		}
 		
-		System.out.println();
+		for (Human human : humans)
+		{
+			human.cry();
+		}
 		
-//		// Dynamic Binding Example
-		a.eat();
-		c.eat();
+		ArrayList<Survival> survivals = new ArrayList<Survival>();
+		survivals.add(new Dog(4, "Baxter"));
+		survivals.add(new Cat(2, "Cherry"));
+		survivals.get(0).fight();
+		survivals.get(1).fight();
 	}
 }

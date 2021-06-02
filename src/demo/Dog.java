@@ -1,29 +1,46 @@
 package demo;
 
-public class Dog extends Animal
+public class Dog extends Animal implements ForestSurvival, Drink
 {
-	// Constructors
-	public Dog()
+	// Fields
+	public boolean haveChasedCars;
+	
+	// Constructor
+	public Dog(int age, String name)
 	{
-		super("Dog", 4, 'm');
-	}
-	public Dog(String name, char sex)
-	{
-		super(name, 4, sex);
-	}
-	public Dog(char name, char sex)
-	{
-		//lsckascdnsvkjsn
+		super(age, name);
+		this.haveChasedCars = false;
 	}
 	
-	// Public Methods
-	public void bark()
+	// Overridden Methods
+	@Override
+	public void eat() 
 	{
-		System.out.println("Barking noises...");
+		System.out.println("Dog eat");
 	}
-	
-	public static void sleep()
-	{
-		System.out.println("Bark and sleep time...");
+
+	@Override
+	public void fight() {
+		System.out.println("Dog fight");
+	}
+
+	@Override
+	public void flight() {
+		System.out.println("Dog flee");
+	}
+
+	@Override
+	public void drinkCleanWater() {
+		System.out.println("Dog Drink Clean Water");
+	}
+
+	@Override
+	public void drinkPuddle() {
+		System.out.println("Dog Drink Puddle");
+	}
+
+	@Override
+	public void hideUnderTree() {
+		System.out.println("Dog hide under tree :(");
 	}
 }

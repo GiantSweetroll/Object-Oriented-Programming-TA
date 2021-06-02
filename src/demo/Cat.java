@@ -1,21 +1,41 @@
 package demo;
 
-public class Cat extends Animal
+public class Cat extends Animal implements Survival, Human, Breathing
 {
-	// Constructors
-	public Cat()
+	// Fields
+	public boolean haveMeowed;
+	
+	// Constructor
+	public Cat(int age, String name)
 	{
-		super("Cat", 4, 'f');
-	}
-	public Cat(String name, char sex)
-	{
-		super(name, 4, sex);
+		super(age, name);
+		this.haveMeowed = false;
 	}
 	
-	// Overridden Methods
 	@Override
-	public void eat()
+	public void eat() 
 	{
-		System.out.println(this.name + " meows and eats something...");
+		System.out.println("Cat eat");
+	}
+
+	@Override
+	public void cry() {
+		System.out.println("Cat cry");
+	}
+
+	@Override
+	public void talk() {
+		System.out.println("Cat talk");
+	}
+
+	@Override
+	public void fight() {
+		System.out.println("Cat fight");
+	}
+
+	@Override
+	public void flight() {
+		System.out.println("Cat flee");
 	}
 }
+
